@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: '微软雅黑'
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.content {
+    width: 32%;
+    padding: 20px;
+    margin: 10px 0;
+    border: solid blue 2px;
+}
+
+.user {
+    letter-spacing: 11px
+}
+
+.password1 {
+    letter-spacing: 38px
+}
+
+.password2 {
+    letter-spacing: 2px
+}
+
+input {
+    width: 70%;
+}
+
+button {
+    width: 25%;
+    height: 10%;
+    margin: 0 auto;
+    display: block;
+}

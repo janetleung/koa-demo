@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>koa-demo | Lh</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <script type="text/javascript" src="./js/vue.js"></script>
+        <script type="text/javascript" src="./js/jquery-1.4.4.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>koa-demo | Lh 注册登录</h1>
+            <div class="content">
+                <form id="form" method="post">
+                    <span class="user">用户</span>名：<input type="text" name="user"  v-model="username"></br></br>
+                    <span class="password1">密</span>码：<input type="password"></br></br>
+                    <span class="password2">重复密</span>码：<input type="password" name="password" v-model="password"></br></br>
+                    <button type="button" name="button" v-on:click="submit">提交注册</button>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+        $(function() {
+            var vm = new Vue({
+                el:'#form',
+                data:{
+                    username:'Email/Telephone',
+                    password:''
+                },
+                methods:{
+                    submit:function () {
+                        alert(123)
+                    }
+                }
+            })
+        })
+        </script>
+    </body>
+</html>
