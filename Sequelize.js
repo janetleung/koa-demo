@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 
 const config = require('./mysql_config');
 
+//实例化
 var sequelize = new Sequelize(config.databases, config.username, config.password, {
     host : config.host,
     dialect : 'mysql',
@@ -13,6 +14,7 @@ var sequelize = new Sequelize(config.databases, config.username, config.password
     }
 });
 
+//设置模型映射
 var Pet = sequelize.define('user', {
     id : {
         type : Sequelize.INTEGER,

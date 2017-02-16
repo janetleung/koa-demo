@@ -4,6 +4,7 @@ const fs = require('mz/fs');
 
 const mime = require('mime');
 
+//处理静态文件
 function staticFiles (url, dir) {
     return async function (ctx, next) {
         var f_path = ctx.request.path;

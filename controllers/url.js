@@ -1,9 +1,11 @@
 var Pet = require('../Sequelize');
 
+//主页
 var index = async function (ctx, next) {
     ctx.render('index.html');
 };
 
+//注册
 var register = async function (ctx, next) {
     console.log(ctx.response.status);
     var
@@ -23,6 +25,7 @@ var register = async function (ctx, next) {
     }
 };
 
+//登录
 var login = async function (ctx, next) {
     var
         username = ctx.request.body.username || '',
@@ -41,6 +44,7 @@ var login = async function (ctx, next) {
     }
  };
 
+//用户名查重
  var query = async function (ctx, next) {
     var
         username = ctx.request.body.username || '';

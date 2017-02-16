@@ -1,5 +1,6 @@
 const router = require('koa-router')();
 
+//用koa-router注册url.js里的各条路由，返回router.routes（）
 function addrouter () {
     var mapping = require(__dirname + '/controllers/url.js');
     for (var url in mapping) {

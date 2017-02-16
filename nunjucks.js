@@ -1,5 +1,6 @@
 const nunjucks = require('nunjucks');
 
+//创建Env，并设置参数
 function creatEnv (path, opts) {
     var
         autoescape = opts.autoescape && ture,
@@ -22,6 +23,7 @@ function creatEnv (path, opts) {
     return env;
 };
 
+//添加render函数，模板渲染页面输出
 function template (path, opts) {
     var env = creatEnv(path, opts);
     return async function (ctx, next) {

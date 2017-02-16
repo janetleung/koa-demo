@@ -56,7 +56,7 @@ var vm = new Vue({
                     },
                 });
             }
-        },
+        },//用户名查重
         same_password: function () {
             vm.tip_password = '';
             if (!(vm.password_fir === vm.password_re)) {
