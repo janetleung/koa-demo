@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>koa-demo | 登录注册</title>
+        <link rel="stylesheet" href="/static/css/index.css">
+        <script type="text/javascript" src="/static/js/vue.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-1.4.4.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <h1>koa-demo | 登录注册</h1>
+                <div class="navigation">
+                    <ul>
+                        <li><a href="#" v-on:click="register">注 册</a></li>
+                        <li><a href="#" v-on:click="login">登 录</a></li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <form id="form" method="post" :action="action">
+                        <span class="user">用户</span>名：
+                        <input type="text" name="username"  v-model="username" v-on:blur="unique_username"></br>
+                        <span v-text="tip_username" class="tip"></span></br>
+                        <span class="password1">密</span>码：
+                        <input type="password" v-bind:name="password1" v-model="password_fir"></br></br>
+                        <span v-if="judge"><span class="password2">重复密</span>码：
+                        <input type="password" v-bind:name="password2" v-model="password_re" v-on:blur="same_password"></br>
+                        <span v-text="tip_password" class="tip"></span></br></span>
+                        <input type="submit" v-model="button" class="button" v-on:click="submit($event)">
+                    </form>
+                </div>
+            </div>
+        </div>
+    <script type="text/javascript" src="/static/js/index.js"></script>
+    </body>
+</html>
